@@ -6,7 +6,7 @@ import { Table, Space } from "antd";
 export const TypicodePostList: React.FC<IResourceComponentsProps> = () => {
   const { tableProps } = useTable({
     syncWithLocation: true,
-    dataProviderName: "typicode", // <--- HAS TO BE DEFINED
+    resource: "typicode-posts",
   });
 
   const { data: userData, isLoading: userIsLoading } = useMany({

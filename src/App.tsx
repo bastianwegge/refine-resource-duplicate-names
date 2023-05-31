@@ -36,6 +36,7 @@ const App = () => {
                     resources={[
                         {
                             name: "posts",
+                            identifier: "default-posts",
                             list: "/default/posts",
                             meta: {
                                 parent: "default",
@@ -50,6 +51,7 @@ const App = () => {
                         },
                         {
                             name: "posts",
+                            identifier: "typicode-posts",
                             list: "/typicode/posts",
                             meta: {
                                 parent: "typicode",

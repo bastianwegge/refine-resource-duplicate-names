@@ -13,6 +13,7 @@ import { Table, Space } from "antd";
 export const DefaultPostList: React.FC<IResourceComponentsProps> = () => {
   const { tableProps } = useTable({
     syncWithLocation: true,
+    resource: "default-posts",
   });
 
   const { data: categoryData, isLoading: categoryIsLoading } = useMany({
