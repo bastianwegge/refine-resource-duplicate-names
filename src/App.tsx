@@ -15,8 +15,8 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import { ConfigProvider } from "antd";
 import "@refinedev/antd/dist/reset.css";
-import { AntdInferencer } from '@refinedev/inferencer/antd';
 import { DefaultPostList } from './pages/default-post-list';
+import { TypicodePostList } from './pages/typicode-post-list';
 
 const API_URL = "https://api.fake-rest.refine.dev";
 const CATEGORIES_API_URL = "https://api.fake-rest.refine.dev";
@@ -34,20 +34,20 @@ const App = () => {
                         typicode: dataProvider(TYPICODE_API_URL),
                     }}
                     resources={[
-                        // {
-                        //     name: "posts",
-                        //     list: "/default/posts",
-                        //     meta: {
-                        //         parent: "default",
-                        //         dataProviderName: "default",
-                        //     },
-                        // },
-                        // {
-                        //     name: "categories",
-                        //     meta: {
-                        //         dataProviderName: "categories",
-                        //     },
-                        // },
+                        {
+                            name: "posts",
+                            list: "/default/posts",
+                            meta: {
+                                parent: "default",
+                                dataProviderName: "default",
+                            },
+                        },
+                        {
+                            name: "categories",
+                            meta: {
+                                dataProviderName: "categories",
+                            },
+                        },
                         {
                             name: "posts",
                             list: "/typicode/posts",
@@ -78,7 +78,7 @@ const App = () => {
                                 }
                             />
                             <Route path="/default/posts" element={<DefaultPostList />} />
-                            <Route path="/typicode/posts" element={<AntdInferencer />} />
+                            <Route path="/typicode/posts" element={<TypicodePostList />} />
                             <Route path="*" element={<ErrorComponent />} />
                         </Route>
                     </Routes>
