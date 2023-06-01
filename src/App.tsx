@@ -38,6 +38,7 @@ const App = () => {
                             name: "posts",
                             identifier: "default-posts",
                             list: "/default/posts",
+                            create: "/default/posts",
                             meta: {
                                 parent: "default",
                                 dataProviderName: "default",
@@ -53,6 +54,7 @@ const App = () => {
                             name: "posts",
                             identifier: "typicode-posts",
                             list: "/typicode/posts",
+                            create: "/default/posts",
                             meta: {
                                 parent: "typicode",
                                 dataProviderName: "typicode",

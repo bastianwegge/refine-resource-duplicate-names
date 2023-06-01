@@ -7,6 +7,7 @@ export const TypicodePostList: React.FC<IResourceComponentsProps> = () => {
   const { tableProps } = useTable({
     syncWithLocation: true,
     resource: "typicode-posts",
+    dataProviderName: "typicode", // <--- HAS TO BE DEFINED
   });
 
   const { data: userData, isLoading: userIsLoading } = useMany({
